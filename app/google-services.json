@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "440681782124",
+    "firebase_url": "https://moviles-a542c.firebaseio.com",
+    "project_id": "moviles-a542c",
+    "storage_bucket": "moviles-a542c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440681782124:android:ecae7fb09881a849fa7149",
+        "android_client_info": {
+          "package_name": "com.example.proyectofinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440681782124-1dgme3q0ilvn82ichighvmrkule3jbmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAaJUe6Ms82poBYMri3rtzXTlaZtQMoY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440681782124-1dgme3q0ilvn82ichighvmrkule3jbmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
