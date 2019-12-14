@@ -14,6 +14,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import kotlinx.android.synthetic.main.fragment_signup.*
+import android.widget.Spinner
+
+
 
 /**
  * A simple [Fragment] subclass.
@@ -61,17 +64,36 @@ class SignupFragment : Fragment() {
 
 
         navController = Navigation.findNavController(view)
+
+
+        //Guardar registro en la base de datos
+        //Importante!!!
         signupButton.setOnClickListener{
 
+            var name: String = view.findViewById<EditText>(R.id.nameSignupEditText).text.toString()
+            var apellidoP: String = view.findViewById<EditText>(R.id.apellidoPaterno).text.toString()
+            var apellidoM: String = view.findViewById<EditText>(R.id.apellidoMaterno).text.toString()
+            val spinner = view.findViewById(R.id.spinner) as Spinner
+            val blood = spinner.selectedItem.toString()
+            Toast.makeText(activity,blood,Toast.LENGTH_LONG).show()
+            var height: Number = view.findViewById<EditText>(R.id.estatura).text.toString().toDouble()
+            var size: Number = view.findViewById<EditText>(R.id.talla).text.toString().toDouble()
+            var weight: Number = view.findViewById<EditText>(R.id.weightSignupEditText).text.toString().toDouble()
+            var birthday: String = view.findViewById<EditText>(R.id.birthDateEditText).text.toString()
             var email: String = view.findViewById<EditText>(R.id.emailSignupEditText).text.toString()
             var password: String = view.findViewById<EditText>(R.id.passwordSignupEditText).text.toString()
-            var name: String = view.findViewById<EditText>(R.id.nameSignupEditText).text.toString()
-            var weight: Number = view.findViewById<EditText>(R.id.weightSignupEditText).text.toString().toInt()
 
             val newUser = hashMapOf(
                 "name" to name,
-                "email" to email,
-                "weight" to weight
+                "apellidoP" to apellidoP,
+                "apellidoM" to apellidoM,
+                "blood" to blood,
+                "height" to height,
+                "size" to size,
+                "weight" to weight,
+                "birthday" to birthday,
+                "email" to email
+
             )
 
 
