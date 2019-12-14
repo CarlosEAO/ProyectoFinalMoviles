@@ -9,5 +9,14 @@
     <string name="weightHint">Peso</string>
     <string name="birthDateHint">Fecha de Nacimiento</string>
 
-
+    <string-array name="sangre">
+        <item>O+</item>
+        <item>O-</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>B+</item>
+        <item>B-</item>
+    </string-array>
 </resources>
