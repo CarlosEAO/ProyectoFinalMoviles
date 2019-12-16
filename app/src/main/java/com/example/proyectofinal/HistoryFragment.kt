@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
+import com.google.firebase.firestore.Query
 
 /**
  * A simple [Fragment] subclass.
@@ -39,6 +40,7 @@ class HistoryFragment : Fragment() {
         val consultations = db.collection("consultations")
         consultations
             .whereEqualTo("userEmail",auth.currentUser!!.email.toString())
+            .orderBy("dateSort", Query.Direction.DESCENDING)
             .get()
             .addOnSuccessListener { documents ->
                 Toast.makeText(activity,documents.size().toString(), Toast.LENGTH_SHORT).show()
