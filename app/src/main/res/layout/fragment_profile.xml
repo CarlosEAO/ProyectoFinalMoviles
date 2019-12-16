@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfileFragment"
+    android:background="#171929"
+    android:padding="50dp">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -18,42 +20,58 @@
     <TextView
         android:id="@+id/nameProfileTextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/lastName1ProfileTextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/lastName2ProfileTextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/birthDateProfileTextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/bloodTypeProfileTextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/weightProfileTextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/sizeProfileTextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/logoutButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cerrar sesión" />
+        android:backgroundTint="#01514A"
+        android:outlineAmbientShadowColor="#015850"
+        android:outlineSpotShadowColor="#015850"
+        android:shadowColor="#015850"
+        android:text="Cerrar sesión"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"/>
 
 </LinearLayout>

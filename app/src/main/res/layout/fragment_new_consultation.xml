@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NewConsultationFragment">
+    tools:context=".NewConsultationFragment"
+    android:background="#171929"
+    android:padding="50dp">
 
     <EditText
         android:id="@+id/nutriologoNameEditText"
@@ -14,7 +16,10 @@
         android:hint="@string/nutriologoNameHint"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="52dp" />
+        tools:layout_editor_absoluteY="52dp"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#009688"/>
 
     <EditText
         android:id="@+id/consultationDateEditText"
@@ -22,7 +27,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/consultationDateHint"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:backgroundTint="#009688"/>
 
     <EditText
         android:id="@+id/consultationWeightEditText"
@@ -30,7 +38,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/consultationWeightHint"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:backgroundTint="#009688"/>
 
     <EditText
         android:id="@+id/consultationSizeEditText"
@@ -38,7 +49,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/consultationSizeHint"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:backgroundTint="#009688"/>
 
     <EditText
         android:id="@+id/consultationObservationsEditText"
@@ -47,12 +61,24 @@
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/consultationObservationsHint"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:backgroundTint="#009688"/>
 
     <Button
         android:id="@+id/sendConsultationButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrar Consulta" />
+        android:text="Registrar Consulta"
+        android:backgroundTint="#01514A"
+        android:outlineAmbientShadowColor="#015850"
+        android:outlineSpotShadowColor="#015850"
+        android:shadowColor="#015850"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"/>
 
 </LinearLayout>

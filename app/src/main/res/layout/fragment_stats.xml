@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StatsFragment">
+    tools:context=".StatsFragment"
+    android:background="#171929"
+    android:padding="50dp">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AQUI VAN LAS ESTADISTICAS" />
+        android:text="AQUI VAN LAS ESTADISTICAS"
+        android:textColor="@android:color/white"/>
 
 </FrameLayout>
