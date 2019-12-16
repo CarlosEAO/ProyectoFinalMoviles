@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -12,6 +13,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 /**
  * A simple [Fragment] subclass.
@@ -63,6 +65,25 @@ class MainFragment : Fragment() {
                 }
             }
             .addOnFailureListener { exception ->
+            }
+
+        val consultations = db.collection("consultations")
+        consultations
+            .whereEqualTo("userEmail",auth.currentUser!!.email.toString())
+            .orderBy("dateSort", Query.Direction.DESCENDING)
+            .limit(1)
+            .get()
+            .addOnSuccessListener { documents ->
+                Toast.makeText(activity,documents.size().toString(), Toast.LENGTH_SHORT).show()
+                for(documentt in documents){
+                    view.findViewById<TextView>(R.id.actualWeightMainTextView).setText(documentt.data?.get("weight").toString())
+                    view.findViewById<TextView>(R.id.actualSizeMainTextView).setText(documentt.data?.get("size").toString())
+                    Toast.makeText(activity,documentt.data.get("date").toString(), Toast.LENGTH_SHORT).show()
+
+                }
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(activity,"error", Toast.LENGTH_SHORT).show()
             }
 
         view.findViewById<Button>(R.id.toHistoryButton).setOnClickListener{
