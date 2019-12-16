@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewConsultationFragment">
+
+    <EditText
+        android:id="@+id/nutriologoNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/nutriologoNameHint"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <EditText
+        android:id="@+id/consultationDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/consultationDateHint"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/consultationWeightEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/consultationWeightHint"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/consultationSizeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/consultationSizeHint"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/consultationObservationsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/consultationObservationsHint"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/sendConsultationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar Consulta" />
+
+</LinearLayout>

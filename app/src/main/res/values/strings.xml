@@ -19,4 +19,10 @@
         <item>B+</item>
         <item>B-</item>
     </string-array>
+
+    <string name="nutriologoNameHint">Nombre del Nutriologo</string>
+    <string name="consultationDateHint">Fecha de la consulta</string>
+    <string name="consultationWeightHint">Peso registrado</string>
+    <string name="consultationSizeHint">Talla Registrada</string>
+    <string name="consultationObservationsHint">Obervaciones</string>
 </resources>

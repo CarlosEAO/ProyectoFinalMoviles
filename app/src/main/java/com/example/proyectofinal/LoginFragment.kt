@@ -2,15 +2,15 @@ package com.example.proyectofinal
 
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.google.firebase.auth.FirebaseAuth
 
 /**
@@ -34,16 +34,17 @@ class LoginFragment : Fragment() {
 
         var view : View = inflater.inflate(R.layout.fragment_login, container, false)
 
-        /*navController = Navigation.findNavController(view)
-
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        if (currentUser != null){
-            navController!!.navigate(R.id.action_loginFragment_to_mainFragment)
-        }*/
-
-
+        setHasOptionsMenu(true)
         return view
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.options_menu, menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item!!,
+            view!!.findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -77,8 +78,6 @@ class LoginFragment : Fragment() {
                         Toast.makeText(activity,"USER NOT logged in", Toast.LENGTH_SHORT).show()
                     }
 
-                    // [START_EXCLUDE]
-                    // [END_EXCLUDE]
                 }
 
         }
@@ -87,14 +86,5 @@ class LoginFragment : Fragment() {
             Toast.makeText(activity,"CLIC", Toast.LENGTH_SHORT).show()
             navController!!.navigate(R.id.action_loginFragment_to_signupFragment)
         }
-
-
-
-        /*view.findViewById<Button>(R.id.loginButton).setOnClickListener{
-            Toast.makeText(activity,"CLIC", Toast.LENGTH_SHORT).show()
-            navController!!.navigate(R.id.action_loginFragment_to_mainFragment)
-        }*/
-
-
     }
 }

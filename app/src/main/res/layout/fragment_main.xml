@@ -3,33 +3,108 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainFragment">
+android:layout_height="match_parent"
+    android:background="@android:color/black">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/userEmailTextView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Aqui va la información" />
-
-    <Button
-        android:id="@+id/logoutButton"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cerrar sesión"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Bienvenido: "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:id="@+id/nameTextView"
+        android:id="@+id/nameMainTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="151dp" />
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/white"/>
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tu peso Actual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/actualWeightMainTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/nameMainTextView"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tu talla actual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/actualSizeMainTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/actualWeightMainTextView"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/toHistoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver historial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#03685E"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/toStatsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver estadísticas"
+        android:backgroundTint="#03685E"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/toHistoryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/toNewConsultationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Nueva Consulta"
+        android:backgroundTint="#03685E"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/toStatsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
